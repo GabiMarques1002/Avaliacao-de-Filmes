@@ -1,5 +1,5 @@
 # Grupo-da-Persin
-https://vscode.dev/editor/liveshare/DCA59FD3B8E988CFBB0397466CFFB6DC4E9D?vscode-lang=pt-br
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
