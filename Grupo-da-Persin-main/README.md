@@ -1,2 +1,0 @@
-# Grupo-da-Persin
-
