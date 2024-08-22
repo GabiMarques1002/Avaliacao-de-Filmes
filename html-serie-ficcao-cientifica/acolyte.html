@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>The Acolyte </title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+.star-rating input {
+    display: none;
+}
+.star-rating label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.star-rating input:checked ~ label {
+    color: #f5b301;
+}
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: #f5b301;
+}
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #555;
+}
+.review {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px #ccc;
+    margin-bottom: 20px;
+}
+.review h3 {
+    margin: 0;
+}
+.review .stars {
+    color: #f5b301;
+}
+    </style>
+</head>
+
+<body>
+    <h1>The Acolyte </h1>
+    <img src="/imgcinema/serie-ficcao/theacolyte.jpg" height="270" loading="eager">
+
+<div class="container">
+    <form id="reviewForm">
+        <label for="movieDescription">Descrição do Filme:</label>
+        <textarea id="movieDescription" name="movieDescription" rows="5" required></textarea>
+
+        <label>Avaliação:</label>
+        <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5">★</label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4">★</label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3">★</label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2">★</label>
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1">★</label>
+        </div>
+
+        <input type="submit" value="Enviar Avaliação">
+    </form>
+
+    <div id="reviews"></div>
+</div>
+
+<script>
+    document.getElementById('reviewForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Coletando dados do formulário
+        const description = document.getElementById('movieDescription').value;
+        const rating = document.querySelector('input[name="rating"]:checked').value;
+
+        // Criando o HTML para exibir a nova avaliação
+        const review = document.createElement('div');
+        review.className = 'review';
+        review.innerHTML = `<p>${description}</p>
+                            <p class="stars">${'★'.repeat(rating)}${'☆'.repeat(5 - rating)}</p>`;
+
+        // Adicionando a avaliação ao div de reviews
+        document.getElementById('reviews').appendChild(review);
+
+        // Limpando o formulário
+        document.getElementById('reviewForm').reset();
+    });
+</script>
+</body>
+</html>
