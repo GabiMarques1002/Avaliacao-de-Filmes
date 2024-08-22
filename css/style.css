@@ -1,6 +1,31 @@
 h1{
+    text-align: center;
     color: darkred
 }
 h2{
+    text-align: center;
     color: navy;
+}
+header {
+
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+header a {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #000000;
+    text-decoration: none;
+    margin: 0 10px;
+}
+header a:hover {
+    text-decoration: underline;
+}
+#description{
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
