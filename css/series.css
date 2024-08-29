@@ -7,7 +7,12 @@ h2{
     color: #7e2a62;
 }
 header {
-
+    background: #ebe3da;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
     color: white;
     text-align: center;
     padding: 20px;
@@ -15,6 +20,7 @@ header {
     bottom: 0;
     width: 100%;
 }
+
 header a {
     text-align: center;
     font-family: Arial, sans-serif;
@@ -23,5 +29,7 @@ header a {
     margin: 0 10px;
 }
 header a:hover {
+    text-decoration: underline;
+    color: darkred;
     text-decoration: underline;
 }
