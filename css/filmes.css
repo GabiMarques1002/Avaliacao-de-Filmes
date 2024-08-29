@@ -33,3 +33,12 @@ header a {
 header a:hover {
     text-decoration: underline;
 }
+.imagem-zoom {
+     width: 300px; /* Largura inicial da imagem */
+     height: auto; /* Mantém a proporção da imagem */
+     transition: transform 0.3s ease; /* Transição suave ao aplicar o zoom */
+  }
+
+.imagem-zoom:hover {
+    transform: scale(1.2); /* Aumenta a imagem em 20% quando o mouse passa por cima */
+  }
