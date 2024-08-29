@@ -1,3 +1,22 @@
+header {
+    background: #ebe3da;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+header{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: none;
+}
+body{
+    background-color: rgb(255, 254, 253);
+}
 h1{
     text-align: center;
     color: darkred
@@ -24,8 +43,11 @@ header a {
 }
 header a:hover {
     text-decoration: underline;
+    color: darkred;
+    text-decoration: underline;
 }
 #description{
     font-family: Arial, sans-serif;
     text-align: center;
 }
+
