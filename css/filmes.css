@@ -14,7 +14,14 @@ h1{
     color: #7e2a62;
 
 }
-
+.imagem-zoom{
+    width: 210px;
+    height: auto;
+    transition: transform 0.3s;
+}
+.imagem-zoom:hover{
+    transform: scale(1.2);
+}
 header {
     background: #ebe3da;
     text-transform: uppercase;
