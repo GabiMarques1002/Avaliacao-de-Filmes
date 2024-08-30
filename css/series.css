@@ -34,7 +34,9 @@ header a:hover {
     text-decoration: underline;
 }
 .imagem-zoom{
-    transition: transform 0,3s;
+    width: ;
+    height: 330px ;
+    transition: transform 0.3s;
 }
 .imagem-zoom:hover{
     transform: scale(1.2);

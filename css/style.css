@@ -1,6 +1,6 @@
 .imagem-zoom{
-    width: 210px;
-    height: auto;
+    width: ;
+    height: 330px ;
     transition: transform 0.3s;
 }
 .imagem-zoom:hover{

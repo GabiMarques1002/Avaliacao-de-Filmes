@@ -38,15 +38,11 @@ header a:hover {
     color: darkred;
     text-decoration: underline;
 }
-
-
 .imagem-zoom{
-     transition: transform 0.3s;
-     width: ;
-     height: 330px;
-    
+    width: ;
+    height: 330px ;
+    transition: transform 0.3s;
 }
 .imagem-zoom:hover{
-     transform: scale(1.2);
+    transform: scale(1.2);
 }
-
