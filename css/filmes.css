@@ -4,24 +4,13 @@ text-align: center;
 
 }
 
-#gentegrande{
-text-align: center;
-
-}
 
 h1{
     text-align: center;
     color: #7e2a62;
 
 }
-.imagem-zoom{
-    width: 210px;
-    height: auto;
-    transition: transform 0.3s;
-}
-.imagem-zoom:hover{
-    transform: scale(1.2);
-}
+
 header {
     background: #ebe3da;
     text-transform: uppercase;
@@ -50,10 +39,14 @@ header a:hover {
     text-decoration: underline;
 }
 .imagem-zoom{
-     width: 210px;
+     width: 250px;
      height: auto;
      transition: transform 0.3s;
 }
 .imagem-zoom:hover{
      transform: scale(1.2);
+}
+
+#grid-comedia img {
+    text-align:justify;
 }

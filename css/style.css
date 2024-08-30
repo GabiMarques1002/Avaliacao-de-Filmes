@@ -1,43 +1,50 @@
-
-header{
-    background: #ebe3da;
-    text-transform: uppercase;
-    color: #000000;
-    font-weight: bold;
-    font-size: 15px;
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+.imagem-zoom{
+    width: 210px;
+    height: auto;
+    transition: transform 0.3s;
 }
+.imagem-zoom:hover{
+    transform: scale(1.2);
+}
+header{
+background: #ebe3da;
+text-transform: uppercase;
+color: #000000;
+font-weight: bold;
+font-size: 15px;
+text-decoration: none;
+color: rgb(255, 255, 255);
+text-align: center;
+padding: 20px;
+position: relative;
+bottom: 0;
+width: 100%;
+}
+
 body{
-    background-color: rgb(255, 254, 253);
+background-color: rgb(255, 255, 255);
 }
 h1{
-    text-align: center;
-    color: darkred
+text-align: center;
+color: darkred
 }
 h2{
-    text-align: center;
-    color: navy;
+text-align: center;
+color: navy;
 }
 header a {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    color: #000000;
-    text-decoration: none;
-    margin: 0 10px;
+text-align: center;
+font-family: Arial, sans-serif;
+color: #000000;
+text-decoration: none;
+margin: 0 10px;
 }
 header a:hover {
-    text-decoration: underline;
-    color: darkred;
-    text-decoration: underline;
+text-decoration: underline;
+color: darkred;
+text-decoration: underline;
 }
 #description{
-    font-family: Arial, sans-serif;
-    text-align: center;
+font-family: Arial, sans-serif;
+text-align: center;
 }
-
