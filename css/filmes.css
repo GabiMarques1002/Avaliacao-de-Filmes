@@ -42,3 +42,11 @@ header a:hover {
     color: darkred;
     text-decoration: underline;
 }
+.imagem-zoom{
+     width: 210px;
+     height: auto;
+     transition: transform 0.3s;
+}
+.imagem-zoom:hover{
+     transform: scale(1.2);
+}
