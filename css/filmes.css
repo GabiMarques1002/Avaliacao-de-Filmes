@@ -38,15 +38,15 @@ header a:hover {
     color: darkred;
     text-decoration: underline;
 }
+
+
 .imagem-zoom{
-     width: 250px;
-     height: auto;
      transition: transform 0.3s;
+     width: ;
+     height: 330px;
+    
 }
 .imagem-zoom:hover{
      transform: scale(1.2);
 }
 
-#grid-comedia img {
-    text-align:justify;
-}
