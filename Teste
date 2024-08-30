@@ -1,0 +1,75 @@
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .gallery-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden; /* Esconde o conteúdo que não cabe na tela */
+        }
+        .gallery-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth; /* Transição suave durante a rolagem */
+            white-space: nowrap;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .gallery-container img {
+            width: 200px;
+            height: auto;
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+        .gallery-container img:hover {
+            transform: scale(1.2);
+        }
+        .gallery-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .gallery-button.left {
+            left: 0;
+        }
+        .gallery-button.right {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Galeria Deslizável com Navegação</h1>
+    
+    <div class="gallery-wrapper">
+        <button class="gallery-button left" onclick="scrollGallery(-1)">&#10094;</button> <!-- Botão para esquerda -->
+        <div class="gallery-container" id="gallery">
+            <img src="imagem1.jpg" alt="Imagem 1">
+            <img src="imagem2.jpg" alt="Imagem 2">
+            <img src="imagem3.jpg" alt="Imagem 3">
+            <img src="imagem4.jpg" alt="Imagem 4">
+            <img src="imagem5.jpg" alt="Imagem 5">
+            <img src="imagem6.jpg" alt="Imagem 6">
+            <!-- Adicione mais imagens conforme necessário -->
+        </div>
+        <button class="gallery-button right" onclick="scrollGallery(1)">&#10095;</button> <!-- Botão para direita -->
+    </div>
+
+    <script>
+        function scrollGallery(direction) {
+            const gallery = document.getElementById('gallery');
+            const scrollAmount = 220; // Distância que cada clique irá mover (largura da imagem + margem)
+
+            gallery.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
