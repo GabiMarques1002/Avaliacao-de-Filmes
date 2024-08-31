@@ -4,22 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Persin Movies</title>
-    <link rel="icon" href="imgcinema/Pipoca.jpeg">
+    <link rel="icon" href="imgcinema/pipoca.avif">
     <meta name="description" content="Avalie seus filmes aqui e receba recomendacoes parecidas">
    <link rel="stylesheet" href="./css/style.css">
     <header>
         <a href="index.html"> Início </a>
         <a href="./categoria-de-filmes.html"> Categoria de Filmes </a>
         <a href="./categoria-de-series.html"> Categoria de Séries </a>
+        <button class="button" onclick="redirectToLogin()">
+            <span>Login</span>
+         </button>
+        
     </header>
     
    
 </head>
 
 <body>
- 
 
 <main>
+    
     <h1> Avalie seus filmes favoritos aqui </h1>
     
     <p id="description"> Bem-Vindo ao Persin Movies!!</p>
@@ -57,10 +61,10 @@
     <img src="imgcinema/filme-1breve/venom3.webp" class="imagem-zoom"></a>
     <img src="imgcinema/filme-1breve/naofaleomal.jpg" class="imagem-zoom"></a>
 </main>
-
-<footer>
-
-    
-</footer>
+<script>
+    function redirectToLogin(){
+        window.location.href = "./login.html"
+    }
+</script>
 </body>
 </html>
