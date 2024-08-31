@@ -15,7 +15,7 @@ font-size: 15px;
 text-decoration: none;
 color: rgb(255, 255, 255);
 text-align: center;
-padding: 20px;
+padding: 30px;
 position: relative;
 bottom: 0;
 width: 100%;
@@ -37,7 +37,7 @@ text-align: center;
 font-family: Arial, sans-serif;
 color: #000000;
 text-decoration: none;
-margin: 0 10px;
+margin: 0 15px;
 }
 header a:hover {
 text-decoration: underline;
@@ -48,3 +48,45 @@ text-decoration: underline;
 font-family: Arial, sans-serif;
 text-align: center;
 }
+button {
+    position: absolute;
+    top: 5px;
+    right: 50px;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #3d405b;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    padding: 15px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+   }
+   
+   button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+   }
+   
+   button span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+   }
+   
+   button:hover span {
+    padding-right: 15px;
+   }
+   
+   button:hover span:after {
+    opacity: 1;
+    right: 0;
+   }
