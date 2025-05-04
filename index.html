@@ -1,70 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Persin Movies</title>
-    <link rel="icon" href="imgcinema/pipoca.avif">
-    <meta name="description" content="Avalie seus filmes aqui e receba recomendacoes parecidas">
-   <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Persin Movies</title>
+  <link rel="stylesheet" href="./css/estilo.css">
+</head>
+<body>
+
     <header>
         <a href="index.html"> Início </a>
         <a href="./categoria-de-filmes.html"> Categoria de Filmes </a>
         <a href="./categoria-de-series.html"> Categoria de Séries </a>
         <button class="button" onclick="redirectToLogin()">
             <span>Login</span>
-         </button>
+        </button>
         
     </header>
-    
-   
-</head>
-
-<body>
-
-<main>
-    
     <h1> Avalie seus filmes favoritos aqui </h1>
+        
+    <p class="description"> Bem-Vindo ao Persin Movies!! Aqui, apaixonados por cinema e séries encontram o lugar perfeito para explorar, descobrir e compartilhar suas opiniões sobre as últimas produções e os clássicos inesquecíveis. Navegue por nossas listas e deixe sua marca avaliando seus filmes e séries favoritos. Juntos, vamos celebrar o melhor do entretenimento, um review por vez. Prepare a pipoca, ajuste a poltrona e embarque nessa jornada conosco. O show está apenas começando!</p>
     
-    <p id="description"> Bem-Vindo ao Persin Movies!!</p>
-    <p id="description">Aqui, apaixonados por cinema e séries encontram o lugar perfeito para explorar, descobrir e compartilhar suas opiniões sobre as últimas produções e os clássicos inesquecíveis.</p>
-    <p id="description">Navegue por nossas listas e deixe sua marca avaliando seus filmes e séries favoritos. Juntos, vamos celebrar o melhor do entretenimento, um review por vez.</p>
-    <p id="description">Prepare a pipoca, ajuste a poltrona e embarque nessa jornada conosco. O show está apenas começando!</p>
     
     <h2>Em Cartaz</h2>
-    <a href="./html-filme-1cartaz/deadpool.html" target="_blank">
-    <img src="imgcinema/filme-1cartaz/deadpool.jpeg"  class="imagem-zoom"></a>
-    <a href="./html-filme-1cartaz/assim-que-acaba.html" target="_blank">
-    <img src="imgcinema/filme-1cartaz/assim-que-acaba.webp" class="imagem-zoom"></a>
-    <a href="./html-filme-1cartaz/alien.html" target="_blank">
-    <img src="imgcinema/filme-1cartaz/alien.webp" class="imagem-zoom"></a>
-    <a href="./html-filme-1cartaz/bad-boys.html" target="_blank">
-    <img src="imgcinema/filme-1cartaz/badboys.webp" class="imagem-zoom"></a>
-    <a href="./html-filme-1cartaz/favorito.html" target="_blank">
-    <img src="imgcinema/filme-1cartaz/favorito.webp" class="imagem-zoom"></a>
-    <a href="./html-filme-1cartaz/garfield.html" target="_blank">
-    <img src="imgcinema/filme-1cartaz/garfield.webp" class="imagem-zoom"></a>
-    <a href="./html-filme-1cartaz/silencioso.html" target="_blank">
-    <img src="imgcinema/filme-1cartaz/silencioso.jpg" class="imagem-zoom"></a>
-    <a href="./html-filme-1cartaz/twister.html" target="_blank">
-    <img src="imgcinema/filme-1cartaz/twister.webp" class="imagem-zoom"></a>
-           
-    
-    <h2 class=""></h2>
+    <div class="gallery-wrapper">
+        <div class="gallery-container" id="gallery">
+            <a href="./html-filme-1cartaz/alien.html">
+                <img src="./imgcinema/filme-1cartaz/alien.webp" alt="Imagem 1">
+            </a>
+            <a href="./html-filme-1cartaz/assim-que-acaba.html">
+                <img src="./imgcinema/filme-1cartaz/assim-que-acaba.webp" alt="Imagem 1">
+            </a>
+            <a href="./html-filme-1cartaz/bad-boys.html">
+                <img src="./imgcinema/filme-1cartaz/badboys.webp" alt="Imagem 1">
+            </a>
+            <a href="./html-filme-1cartaz/deadpool.html">
+                <img src="./imgcinema/filme-1cartaz/deadpool.jpeg" alt="Imagem 1">
+            </a>
+            <a href="./html-filme-1cartaz/favorito.html">
+                <img src="./imgcinema/filme-1cartaz/favorito.webp" alt="Imagem 1">
+            </a>
+            <a href="./html-filme-1cartaz/garfield.html">
+                <img src="./imgcinema/filme-1cartaz/garfield.webp" alt="Imagem 1">
+            </a>
+            <a href="./html-filme-1cartaz/silencioso.html">
+                <img src="./imgcinema/filme-1cartaz/silencioso.jpg" alt="Imagem 1">
+            </a>
+        </div>
+    </div>
+
     <h2>Em Breve</h2>
-    <img src="imgcinema/filme-1breve/coringa.jpg" class="imagem-zoom"></a>
-    <img src="imgcinema/filme-1breve/kraven.jpg" class="imagem-zoom"></a>
-    <img src="imgcinema/filme-1breve/moana.jpg" class="imagem-zoom"></a>
-    <img src="imgcinema/filme-1breve/gladiador.jpg" class="imagem-zoom"></a>
-    <img src="imgcinema/filme-1breve/musafa.jpeg" class="imagem-zoom"></a>
-    <img src="imgcinema/filme-1breve/beetlejuice.jpg" class="imagem-zoom"></a>
-    <img src="imgcinema/filme-1breve/venom3.webp" class="imagem-zoom"></a>
-    <img src="imgcinema/filme-1breve/naofaleomal.jpg" class="imagem-zoom"></a>
-</main>
-<script>
-    function redirectToLogin(){
-        window.location.href = "./login.html"
-    }
-</script>
+    <div class="gallery-wrapper">
+      <div class="gallery-container" id="gallery">
+            <img src="./imgcinema/filme-1breve/beetlejuice.jpg" alt="Imagem 1">
+            <img src="./imgcinema/filme-1breve/coringa.jpg" alt="Imagem 1">
+            <img src="./imgcinema/filme-1breve/gladiador.jpg" alt="Imagem 1">
+            <img src="./imgcinema/filme-1breve/kraven.jpg" alt="Imagem 1">
+            <img src="./imgcinema/filme-1breve/moana.jpg" alt="Imagem 1">
+            <img src="./imgcinema/filme-1breve/musafa.jpeg" alt="Imagem 1">
+            <img src="./imgcinema/filme-1breve/naofaleomal.jpg" alt="Imagem 1">
+    </div>
+    </div>
+    
+    <script src="./script.js"></script>
 </body>
 </html>
+

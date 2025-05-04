@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(124, 5, 5);
+}
+
+
+header{
+    position: absolute;
+    top: 0;
+    background: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+}
+    
+header a {
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    color: darkred;
+    margin: 0 15px;
+}
+        
+header a:hover {
+    text-decoration: underline;
+}
+.button {
+    position: absolute;
+    top: 5px;
+    right: 50px;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: darkred;
+    border: none;
+    color: black;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 17px;
+    padding: 15px;
+    width: 120px;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.5s ease;
+   }
+.button:hover {
+    background-color: black;
+    color: darkred;
+    border: 2px solid darkred;
+}
+
+
+h1{
+    padding: 150px 50px 20px 50px;
+    text-align: center;
+    color: black;
+}
+
+h2{
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+
+.description{
+font-family: Arial, sans-serif;
+text-align: center;
+font-size: 16px;
+color: black;
+margin: 25px 200px;
+}
+
+.gallery-wrapper {
+position: relative;
+width: 100%;
+overflow: hidden; /* Esconde o conteúdo que não cabe na tela */
+}
+.gallery-container {
+display: flex;
+overflow-x: auto;
+scroll-behavior: smooth; /* Transição suave durante a rolagem */
+white-space: nowrap;
+padding: 10px;
+box-sizing: border-box;
+}
+.gallery-container img {
+width: 200px;
+height: auto;
+margin-right: 10px;
+transition: transform 0.3s ease;
+display: inline-block;
+}
+.gallery-container img:hover {
+transform: scale(1.2);
+}
