@@ -1,12 +1,19 @@
-body {
+*{
   margin: 0;
-  height: 100vh; /* Altura total da tela */
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  background-color: #f4f4f4; /* Cor de fundo */
-  font-family: Arial, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Libre Baskerville", serif;
+  text-decoration: none;
+  list-style: none;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background-color: darkred;
+}
+
 .form_container {
   width: fit-content;
   height: 100vh;
@@ -16,22 +23,11 @@ body {
   justify-content: center;
   gap: 15px;
   padding: 50px 40px 20px 40px;
-  background-color: #ffffff;
+  background-color: black;
   box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
     0px 59px 36px rgba(0, 0, 0, 0.05), 0px 26px 26px rgba(0, 0, 0, 0.09),
     0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
-  border-radius: 11px;
-  font-family: "Inter", sans-serif;
-}
-
-.logo_container {
-  box-sizing: border-box;
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(180deg, rgba(248, 248, 248, 0) 50%, #F8F8F888 100%);
-  border: 1px solid #F7F7F8;
-  filter: drop-shadow(0px 0.5px 0.5px #EFEFEF) drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
-  border-radius: 11px;
+  border-radius: 20px;
 }
 
 .title_container {
@@ -45,8 +41,8 @@ body {
 .title {
   margin: 0;
   font-size: 1.25rem;
-  font-weight: 700;
-  color: #212121;
+  font-weight: bold;
+  color: darkred;
 }
 
 .subtitle {
@@ -54,7 +50,7 @@ body {
   max-width: 80%;
   text-align: center;
   line-height: 1.1rem;
-  color: #8B8E98
+  color: white;
 }
 
 .input_container {
@@ -75,9 +71,9 @@ body {
 }
 
 .input_label {
-  font-size: 0.75rem;
-  color: #8B8E98;
-  font-weight: 600;
+  font-size: 0.9rem;
+  color: darkred;
+  font-weight: bold;
 }
 
 .input_field {
@@ -86,15 +82,14 @@ body {
   padding: 0 0 0 40px;
   border-radius: 7px;
   outline: none;
-  border: 1px solid #e5e5e5;
-  filter: drop-shadow(0px 1px 0px #efefef)
-    drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
-  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+  background: transparent;
+  border: 2px solid darkred;
+  transition: 0.5s ease;
 }
 
 .input_field:focus {
-  border: 1px solid transparent;
-  box-shadow: 0px 0px 0px 2px #242424;
+  border: 2px solid darkred;
+  box-shadow: 0 0 25px darkred;
   background-color: transparent;
 }
 
@@ -102,46 +97,34 @@ body {
   width: 100%;
   height: 40px;
   border: 0;
-  background: #115DFC;
+  background: darkred;
   border-radius: 7px;
   outline: none;
-  color: #ffffff;
+  color: black;
+  font-weight: bold;
   cursor: pointer;
 }
 
-.sign-in_ggl {
+.sign-in_ggl, .sign-in_apl {
   width: 100%;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: #ffffff;
+  background: transparent;
   border-radius: 7px;
   outline: none;
-  color: #242424;
-  border: 1px solid #e5e5e5;
-  filter: drop-shadow(0px 1px 0px #efefef)
-    drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+  color: darkred;
+  border: 2px solid darkred;
   cursor: pointer;
+}
+.sign-in_btn:hover,
+.sign-in_ggl:hover,
+.sign-in_apl:hover{
+  box-shadow: 0 0 25px darkred;
 }
 
-.sign-in_apl {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: #212121;
-  border-radius: 7px;
-  outline: none;
-  color: #ffffff;
-  border: 1px solid #e5e5e5;
-  filter: drop-shadow(0px 1px 0px #efefef)
-    drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
-  cursor: pointer;
-}
 
 .separator {
   width: 100%;
@@ -149,7 +132,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 30px;
-  color: #8B8E98;
+  color: darkred;
 }
 
 .separator .line {
@@ -157,12 +140,12 @@ body {
   width: 100%;
   height: 1px;
   border: 0;
-  background-color: #e8e8e8;
+  background-color: darkred;
 }
 
 .note {
   font-size: 0.75rem;
-  color: #8B8E98;
+  color: white;
   text-decoration: underline;
 }
 
