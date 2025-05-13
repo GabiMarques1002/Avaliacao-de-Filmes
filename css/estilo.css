@@ -7,7 +7,7 @@
     list-style: none;
 }
 body{
-    background-color: rgb(124, 5, 5);
+    background-color: #762B60;
 }
 
 
@@ -19,7 +19,7 @@ header{
     padding: 35px 0;
     text-transform: uppercase;
     font-weight: bold;
-    background: black;
+    background: #581845;
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-evenly;
@@ -30,7 +30,7 @@ header{
 .navbar a{
     text-decoration: none;
     font-size: 18px;
-    color: darkred;
+    color: #FFFFFF;
     font-weight: 500;
     margin: 0 20px;
     border-bottom: 3px solid transparent;
@@ -39,30 +39,26 @@ header{
 
 .navbar a:hover,
 .navbar a.active{
-    border-bottom: 3px solid darkred;
+    color: #D4AF37;
 }
 .logo {
     font-size: 25px;
-    color: darkred;
+    color: #D4AF37;
     font-weight: 600;
     transition: 0.3s ease;
 }
 .logo:hover {
-    text-shadow: 0 0 25px darkred, 
-                 0 0 50px darkred;
+    text-shadow: 0 0 25px #D4AF37, 
+                 0 0 50px #D4AF37;
     transform: scale(1.2);
 }
 
 .button {
-    position: absolute;
-    top: 5px;
-    right: 50px;
     display: inline-block;
     border-radius: 10px;
-    background-color: darkred;
+    background-color: #D4AF37;
     border: none;
-    color: black;
-    letter-spacing: 1px;
+    color: #581845;
     text-align: center;
     font-size: 17px;
     padding: 15px;
@@ -72,33 +68,32 @@ header{
     transition: 0.5s ease;
    }
 .button:hover {
-    background-color: black;
-    color: darkred;
-    border: 2px solid darkred;
+    background-color: #B38E2F;
+    color: #581845;
 }
 
 
 h1{
     padding: 150px 50px 20px 50px;
     text-align: center;
-    color: black;
+    color: #D4AF37;
 }
 
 
 h2{
     padding: 20px;
     text-align: center;
-    color: black;
+    color: #D4AF37;
 }
 
 .description{
-    border: 2px solid black;
+    border: 2px solid #D4AF37;
     border-radius: 20px;
     padding: 20px;
     font-family: Arial, sans-serif;
     text-align: center;
     font-size: 16px;
-    color: black;
+    color: #FFFFFF;
     margin: 25px 200px;
 }
 
@@ -123,5 +118,6 @@ transition: transform 0.3s ease;
 display: inline-block;
 }
 .gallery-container img:hover {
-transform: scale(1.2);
+transform: scale(1.1);
 }
+

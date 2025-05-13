@@ -1,63 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Libre Baskerville", serif;
+  text-decoration: none;
+  list-style: none;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background-color: #762B60;
+  height: 100vh; /* Para garantir que o corpo ocupe toda a tela */
+  margin: 0;
+}
+
+.container {
+  min-width: 320px;  /* Garante que o contêiner tenha largura mínima */
+  max-width: 800px;  /* Para evitar que o contêiner seja muito largo */
+  min-height: 100vh; /* Ajusta a altura para crescer com o conteúdo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;  /* Faz o conteúdo começar do topo */
+  gap: 20px;  /* Ajusta o espaçamento entre os elementos */
+  padding: 50px 40px 20px 40px;
+  background-color: #FBE9F4;
+  box-shadow: 0px 106px 42px rgba(0, 0, 0, 0.01),
+    0px 59px 36px rgba(0, 0, 0, 0.05), 0px 26px 26px rgba(0, 0, 0, 0.09),
+    0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  overflow-y: auto; /* Garante que o conteúdo não ultrapasse os limites da tela */
 }
 
 label {
-    font-weight: bold;
+    font-weight: 600;
     display: block;
-    margin: 10px 0 5px;
+    margin: 10px 5px;
+    color: #581845;
 }
+
 input[type="text"], textarea {
-    width: 100%;
+    width: 50%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
+    background-color: #fff;
+    border: 1px solid #581845;
     border-radius: 5px;
 }
+
 .star-rating {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
     margin-bottom: 10px;
 }
+
 .star-rating input {
     display: none;
 }
+
 .star-rating label {
     font-size: 30px;
     color: #ccc;
     cursor: pointer;
     transition: color 0.2s;
 }
+
 .star-rating input:checked ~ label {
     color: #f5b301;
 }
+
 .star-rating label:hover,
 .star-rating label:hover ~ label {
     color: #f5b301;
 }
+
 input[type="submit"] {
-    background-color: #333;
-    color: #fff;
+    background-color: #581845;
+    color: #FBE9F4;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
+
 input[type="submit"]:hover {
-    background-color: #555;
+    background-color: #461136;
 }
+
 .review {
     background-color: #fff;
+    color: #581845;
     padding: 20px;
+    border: 2px solid #D4AF37;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px 0px #ccc;
     margin-bottom: 20px;
+    width: 100%;  /* Garante que as avaliações ocupem toda a largura do contêiner */
 }
+
 .review h3 {
     margin: 0;
 }
+
 .review .stars {
     color: #f5b301;
+}
+
+/* Estilo para a imagem do filme */
+#posterFilme {
+    display: block;
+    max-width: 200px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Estilo do dropdown */
+select { 
+  font-size: 16px;
+  border-radius: 6px;
+  width: 200px;
+  cursor: pointer;
+  border: 1px solid #581845;
+}
+
+.titulo-secao {
+    font-size: 24px;
+    font-weight: 700;
+    color: #581845; /* Cor do título */
+    margin-bottom: 15px; /* Espaçamento abaixo do título */
 }

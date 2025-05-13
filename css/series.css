@@ -1,53 +1,61 @@
-body{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(124, 5, 5);
+    font-family: "Libre Baskerville", serif;
+    text-decoration: none;
+    list-style: none;
 }
+body{
+    background-color: #762B60;
+}
+
 
 header{
-    position: absolute;
-    top: 0;
-    background: black;
+    width: 100%;
+    padding: 35px 0;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 15px;
-    text-align: center;
-    padding: 30px 0;
-    width: 100%;
-}
-    
-header a {
-    text-align: center;
-    text-decoration: none;
-    font-family: Arial, sans-serif;
-    color: darkred;
-    margin: 0 15px;
-}
-        
-header a:hover {
-    text-decoration: underline;
+    background: #581845;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 100;
 }
 
-h1{
-    margin: 150px 35% 20px 35%;
-    text-align: center;
-    color: black;
-    border: 2px solid black;
-    border-radius: 20px;
+.navbar a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 500;
+    margin: 0 20px;
+    border-bottom: 3px solid transparent;
     transition: 0.5s ease;
 }
 
-h1:hover{
-    background-color: black;
-    color: darkred;
+.navbar a:hover,
+.navbar a.active{
+    color: #D4AF37;
+}
+.logo {
+    font-size: 25px;
+    color: #D4AF37;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.logo:hover {
+    text-shadow: 0 0 25px #D4AF37, 
+                 0 0 50px #D4AF37;
+    transform: scale(1.2);
 }
 
 h2{
     padding: 20px;
     text-align: center;
-    color: black;
+    color: #D4AF37;
 }
+
 
 .gallery-wrapper {
 position: relative;

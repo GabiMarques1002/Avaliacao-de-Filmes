@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comédia Romântica</title>
+    <link rel="stylesheet" href="../css/avaliacao.css">
+</head>
+
+<body>
+
+<div class="container">
+    <!-- Título da seção -->
+    <h2 class="titulo-secao">Filmes de Comédia Romântica</h2>
+
+    <label for="escolha">Escolha o filme que você quer avaliar:</label>
+    <select id="escolha" name="escolha">
+        <option value=""></option>
+        <option value="10coisas">10 Coisas que Eu Odeio em Você</option>
+        <option value="beverly">Crush à Altura em Beverly Hills</option>
+        <option value="bridget">O Diário de Bridget Jones</option>
+        <option value="perder-homem">Como Perder um Homem em 10 Dias</option>
+        <option value="garotos">Para Todos os Garotos que Já Amei</option>
+        <option value="linda">Uma Linda Mulher</option>
+        <option value="nothing">Nothing Hill</option>
+        <option value="proposta">A Proposta</option>
+        <option value="todos-menos">Todos Menos Você</option>
+    </select>
+
+    <div id="imagemFilmeContainer">
+        <img id="posterFilme" src="" alt="Pôster do Filme" style="display: none; max-width: 200px; margin-top: 20px;">
+    </div>
+
+    <form id="reviewForm">
+        <label for="movieDescription">Descrição do Filme:</label>
+        <textarea id="movieDescription" name="movieDescription" rows="5" required></textarea>
+
+        <label>Avaliação:</label>
+        <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5">
+            <label for="star5">★</label>
+            <input type="radio" id="star4" name="rating" value="4">
+            <label for="star4">★</label>
+            <input type="radio" id="star3" name="rating" value="3">
+            <label for="star3">★</label>
+            <input type="radio" id="star2" name="rating" value="2">
+            <label for="star2">★</label>
+            <input type="radio" id="star1" name="rating" value="1">
+            <label for="star1">★</label>
+        </div>
+
+        <input type="submit" value="Enviar Avaliação">
+    </form>
+
+    <div id="reviews"></div>
+</div>
+
+<script>
+    const form = document.getElementById('reviewForm');
+    const reviewsDiv = document.getElementById('reviews');
+    const selectFilme = document.getElementById('escolha');
+
+    const imagensFilmes = {
+        "10coisas": "../imgcinema/filme-comedia-romantica/coisas-que-odeio.jpg",
+        "beverly": "../imgcinema/filme-comedia-romantica/Beverly-Hills.jpg",
+        "bridget": "../imgcinema/filme-comedia-romantica/Bridget-Jones.jpg",
+        "perder-homem": "../imgcinema/filme-comedia-romantica/como-perder-homem.jpg",
+        "garotos": "../imgcinema/filme-comedia-romantica/todos-os-garotos.jpg",
+        "linda": "../imgcinema/filme-comedia-romantica/lindamulher.jpg",
+        "nothing": "../imgcinema/filme-comedia-romantica/Nothing.jpg",
+        "proposta": "../imgcinema/filme-comedia-romantica/AProposta.jpg",
+        "todos-menos": "../imgcinema/filme-comedia-romantica/todosmenosvoce.jpg"
+    };
+
+    function salvarAvaliacao(filme, descricao, nota) {
+        const todasAvaliacoes = JSON.parse(localStorage.getItem('avaliacoes')) || {};
+        if (!todasAvaliacoes[filme]) todasAvaliacoes[filme] = [];
+        todasAvaliacoes[filme].push({ descricao, nota });
+        localStorage.setItem('avaliacoes', JSON.stringify(todasAvaliacoes));
+    }
+
+    function mostrarAvaliacoes(filme) {
+        reviewsDiv.innerHTML = '';
+        const todasAvaliacoes = JSON.parse(localStorage.getItem('avaliacoes')) || {};
+        const avaliacoes = todasAvaliacoes[filme] || [];
+        const nomeFilme = selectFilme.options[selectFilme.selectedIndex].text;
+
+        avaliacoes.forEach(avaliacao => {
+            const review = document.createElement('div');
+            review.className = 'review';
+            review.innerHTML = `
+                <h3 style="color: #D4AF37;">${nomeFilme}</h3>
+                <p>${avaliacao.descricao}</p>
+                <p class="stars">${'★'.repeat(avaliacao.nota)}${'☆'.repeat(5 - avaliacao.nota)}</p>
+            `;
+            reviewsDiv.appendChild(review);
+        });
+    }
+
+    function atualizarImagem(filme) {
+        const img = document.getElementById('posterFilme');
+        if (imagensFilmes[filme]) {
+            img.src = imagensFilmes[filme];
+            img.style.display = 'block';
+        } else {
+            img.style.display = 'none';
+            img.src = '';
+        }
+    }
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const filmeSelecionado = selectFilme.value;
+        const descricao = document.getElementById('movieDescription').value;
+        const nota = document.querySelector('input[name="rating"]:checked')?.value;
+
+        if (!filmeSelecionado || !nota) {
+            alert("Preencha todos os campos.");
+            return;
+        }
+
+        salvarAvaliacao(filmeSelecionado, descricao, nota);
+        form.reset();
+        mostrarAvaliacoes(filmeSelecionado);
+    });
+
+    selectFilme.addEventListener('change', function() {
+        const filmeSelecionado = this.value;
+        mostrarAvaliacoes(filmeSelecionado);
+        atualizarImagem(filmeSelecionado);
+    });
+</script>
+
+</body>
+</html>
